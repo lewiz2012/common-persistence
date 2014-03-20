@@ -10,16 +10,105 @@
   <name>common-persistence</name>
   <url>http://maven.apache.org</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
   <dependencies>
+  	<!-- persistence -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-orm</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>${hibernate.version}</version>
+	</dependency>
+		
+		
+  	<!-- Spring -->
+  	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+		
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate</artifactId>
+		<version>3.1.3</version>
+	</dependency>
+	
+   
+	
+	<!-- JDBC -->
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>${mysql-connector-java.version}</version>
+		<scope>runtime</scope>
+	</dependency>
+	
+	<!-- test -->
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit-dep</artifactId>
+		<version>${junit.version}</version>
+		<scope>test</scope>
+	</dependency>
+    <dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-test</artifactId>
+		<version>${org.springframework.version}</version>
+		<scope>test</scope>
+	</dependency>
   </dependencies>
+  
+  <repositories>
+	  <repository>
+	    <id>java.net</id>
+	    <url>http://download.java.net/maven/2/</url>
+	</repository>
+  </repositories>
+  <properties>
+	 	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.test.failure.ignore>true</maven.test.failure.ignore>
+		
+		<!-- Spring -->
+		<org.springframework.version>4.0.0.RELEASE</org.springframework.version>
+		<org.springframework.security.version>3.2.0.RELEASE</org.springframework.security.version>
+		<javassist.version>3.18.1-GA</javassist.version>
+	
+		<!-- persistence -->
+		<hibernate.version>4.3.4.Final</hibernate.version>
+		<mysql-connector-java.version>5.1.28</mysql-connector-java.version>
+		<tomcat-dbcp.version>7.0.42</tomcat-dbcp.version>
+	
+		<!-- logging -->
+		<org.slf4j.version>1.7.5</org.slf4j.version>
+		<logback.version>1.0.11</logback.version>
+	
+		<!-- various -->
+		<hibernate-validator.version>5.0.2.Final</hibernate-validator.version>
+	
+		<!-- util -->
+		<guava.version>16.0-rc1</guava.version>
+		<commons-lang3.version>3.2.1</commons-lang3.version>
+	
+		<!-- testing -->
+		<org.hamcrest.version>1.3</org.hamcrest.version>
+		<junit.version>4.11</junit.version>
+		<mockito.version>1.9.5</mockito.version>
+	
+		<httpcore.version>4.3</httpcore.version>
+		<httpclient.version>4.3.1</httpclient.version>
+	
+		<rest-assured.version>2.1.0</rest-assured.version>
+	
+	
+		<!-- maven plugins -->
+		<maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
+		<maven-war-plugin.version>2.4</maven-war-plugin.version>
+		<maven-surefire-plugin.version>2.16</maven-surefire-plugin.version>
+		<maven-resources-plugin.version>2.6</maven-resources-plugin.version>
+		<cargo-maven2-plugin.version>1.4.5</cargo-maven2-plugin.version>
+	</properties>
 </project>
